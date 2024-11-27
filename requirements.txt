@@ -1,12 +1,10 @@
 git+https://github.com/MrMKN/pyrogram
 pyrogram==2.0.83
-pyromod
-humanize
+TgCrypto
+pyropatch   
 pymongo
+dnspython
 Pillow
 hachoir
-TgCrypto
-dnspython
-Flask
-gunicorn
 aiohttp
+pytz
