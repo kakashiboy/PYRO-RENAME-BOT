@@ -1,5 +1,5 @@
 git+https://github.com/MrMKN/pyrogram
-program==2.0.80
+pyrogram==2.0.80
 TgCrypto
 pyropatch
 pymongo==4.6.3
