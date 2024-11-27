@@ -32,7 +32,7 @@ class Config(object):
    
     # database config
     DB_NAME = os.environ.get("DB_NAME","Cluster0")     
-    DB_URL  = os.environ.get("DB_URL", " mongodb+srv://mrsasuke:lazzyboy227@cluster0.a3lux.mongodb.net/?retryWrites=true&w=majority")
+    DB_URL  = os.environ.get("DB_URL", "mongodb+srv://mrsasuke:lazzyboy227@cluster0.a3lux.mongodb.net/?retryWrites=true&w=majority")
  
     # other configs
     BOT_UPTIME  = time.time()
