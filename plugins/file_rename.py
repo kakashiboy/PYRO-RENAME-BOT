@@ -82,7 +82,7 @@ async def rename_callback(bot, query):
 
     sts = await query.message.edit("Tʀyɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅɪɴɢ....")    
     try:
-     	path = await file.download(file_name=file_path, progress=progress_for_pyrogram,progress_args=("Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....", sts, time.time()))                    
+     	path = await file.download(file_name=file_path, progress=progress_for_pyrogram,progress_args=("Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....",   ms, c_time   ))                    
     except Exception as e:
      	return await sts.edit(e)
     duration = 0
@@ -124,7 +124,7 @@ async def rename_callback(bot, query):
                 thumb=ph_path, 
                 caption=caption, 
                 progress=progress_for_pyrogram,
-                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....", sts, time.time())
+                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....",   ms, c_time   ))
             )
         elif type == "video": 
             await sts.reply_video(
@@ -133,7 +133,7 @@ async def rename_callback(bot, query):
                 thumb=ph_path,
                 duration=duration,
                 progress=progress_for_pyrogram,
-                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....", sts, time.time())
+                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....",   ms, c_time   ))
             )
         elif type == "audio": 
             await sts.reply_audio(
@@ -142,7 +142,7 @@ async def rename_callback(bot, query):
                 thumb=ph_path,
                 duration=duration,
                 progress=progress_for_pyrogram,
-                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....", sts, time.time())
+                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....",   ms, c_time   ))
             )
     except Exception as e:          
         try: 
