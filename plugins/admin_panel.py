@@ -34,7 +34,7 @@ logger.setLevel(logging.INFO)
 @Client.on_message(filters.command(["stats", "status"]) & filters.user(Config.ADMIN))
 async def get_stats(bot, message):
     total_users = await db.total_users_count()
-    uptime = time.strftime("%Hh%Mm%Ss", time.gmtime(c_time - bot.uptime))    
+    uptime = time.strftime("%Hh%Mm%Ss", time.gmtime(time.time - bot.uptime))    
     start_t = time.time()
     st = await message.reply('**Aᴄᴄᴇꜱꜱɪɴɢ Tʜᴇ Dᴇᴛᴀɪʟꜱ.....**')    
     end_t = time.time()
