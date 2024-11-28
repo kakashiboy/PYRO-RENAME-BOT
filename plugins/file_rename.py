@@ -124,7 +124,7 @@ async def rename_callback(bot, query):
                 thumb=ph_path, 
                 caption=caption, 
                 progress=progress_for_pyrogram,
-                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....", sts, time.time()))
+                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....", sts, time.time())
             )
         elif type == "video": 
             await sts.reply_video(
