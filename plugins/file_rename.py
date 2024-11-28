@@ -77,12 +77,12 @@ async def rename_selection(client, message):
 async def rename_callback(bot, query): 
     user_id = query.from_user.id
     file_name = query.message.text.split(":-")[1]
-    file_path = f"downloads/{user_id}{time.time}/{file_name}"
+    file_path = f"downloads/{user_id}{time.time()}/{file_name}"
     file = query.message.reply_to_message
 
     sts = await query.message.edit("Tʀyɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅɪɴɢ....")    
     try:
-     	path = await file.download(file_name=file_path, progress=progress_for_pyrogram,progress_args=("Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....",   sts, time.time()))                    
+     	path = await file.download(file_name=file_path, progress=progress_for_pyrogram,progress_args=("Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ....", sts, time.time()))                    
     except Exception as e:
      	return await sts.edit(e)
     duration = 0
@@ -124,7 +124,7 @@ async def rename_callback(bot, query):
                 thumb=ph_path, 
                 caption=caption, 
                 progress=progress_for_pyrogram,
-                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....",   sts, time.time()))
+                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....", sts, time.time()))
             )
         elif type == "video": 
             await sts.reply_video(
@@ -133,7 +133,7 @@ async def rename_callback(bot, query):
                 thumb=ph_path,
                 duration=duration,
                 progress=progress_for_pyrogram,
-                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....",   sts, time.time()))
+                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....", sts, time.time()))
             )
         elif type == "audio": 
             await sts.reply_audio(
@@ -142,7 +142,7 @@ async def rename_callback(bot, query):
                 thumb=ph_path,
                 duration=duration,
                 progress=progress_for_pyrogram,
-                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....",   sts, time.time()))
+                progress_args=("Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....", sts, time.time()))
             )
     except Exception as e:          
         try: 
