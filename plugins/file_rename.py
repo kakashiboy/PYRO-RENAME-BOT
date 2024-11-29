@@ -14,21 +14,9 @@ from PIL import Image
 import os, time
 
 
-@Client.on_message(filters.private & (filters.document | filters.audio | filters.video))
+@Client.on_message(filters.public & (filters.document | filters.audio | filters.video))
 async def rename_handler(client, message):
     file = getattr(message, message.media.value)
-    filename = file.file_name  
-    if file.file_size > 4000 * 1024 * 1024 * 1024 * 1024:
-        return await message.reply_text("Sᴏʀʀy Bʀᴏ Tʜɪꜱ Bᴏᴛ Iꜱ Dᴏᴇꜱɴ'ᴛ Sᴜᴩᴩᴏʀᴛ Uᴩʟᴏᴀᴅɪɴɢ Fɪʟᴇꜱ Bɪɢɢᴇʀ Tʜᴀɴ 4Gʙ")
-        
-async def rename_handler(client, message):
-    file = getattr(message, message.document.value)
-    filename = file.file_name  
-    if file.file_size > 4000 * 1024 * 1024 * 1024 * 1024:
-        return await message.reply_text("Sᴏʀʀy Bʀᴏ Tʜɪꜱ Bᴏᴛ Iꜱ Dᴏᴇꜱɴ'ᴛ Sᴜᴩᴩᴏʀᴛ Uᴩʟᴏᴀᴅɪɴɢ Fɪʟᴇꜱ Bɪɢɢᴇʀ Tʜᴀɴ 4Gʙ")
-
-    async def rename_handler(client, message):
-    file = getattr(message, message.audio.value)
     filename = file.file_name  
     if file.file_size > 4000 * 1024 * 1024 * 1024 * 1024:
         return await message.reply_text("Sᴏʀʀy Bʀᴏ Tʜɪꜱ Bᴏᴛ Iꜱ Dᴏᴇꜱɴ'ᴛ Sᴜᴩᴩᴏʀᴛ Uᴩʟᴏᴀᴅɪɴɢ Fɪʟᴇꜱ Bɪɢɢᴇʀ Tʜᴀɴ 4Gʙ")
